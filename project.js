@@ -4,8 +4,6 @@ function computerPlay() {
     return choices[Math.floor(Math.random() * 3)];
 }
 
-let computerSelection = computerPlay();
-
 let playerScore = 0;
 let computerScore = 0;
 let draw = 0;
@@ -42,8 +40,8 @@ function playRound(playerSelection, computerSelection){
 }
 
 
-
 for (i=0; i<5; i++) {
+    let computerSelection = computerPlay();
     let playerSelection = prompt('Rock, Paper or Scissors?').toLowerCase();
     let roundResult = playRound(playerSelection, computerSelection);
     console.log(roundResult);
